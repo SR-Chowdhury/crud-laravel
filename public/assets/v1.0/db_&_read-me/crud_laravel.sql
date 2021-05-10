@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2021 at 10:33 AM
+-- Generation Time: May 10, 2021 at 10:48 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -132,9 +132,7 @@ CREATE TABLE `v1bio` (
 --
 
 INSERT INTO `v1bio` (`id`, `category_id`, `user_name`, `image`, `email`, `phone`, `created_at`, `updated_at`) VALUES
-(2, 2, 'Marjan', 'public/assets/v1.0/1699358392971200.png', 'marjan@gmail.com', '01712325645', NULL, NULL),
-(3, 2, 'Tanzima Chowdhury', 'public/assets/v1.0/1699356476178628.png', 'shihan3star@gmail.com', '01787368571', NULL, NULL),
-(5, 2, 'Shihan Chowdhury', 'public/assets/v1.0/1699359055199095.png', 'hackedgdown@gmail.com', '01719896982', NULL, NULL);
+(8, 1, 'Shihan', 'public/assets/v1.0/image/1699360490183353.png', 'hackedgdown@gmail.com', '01719896982', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -210,7 +208,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `v1bio`
 --
 ALTER TABLE `v1bio`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

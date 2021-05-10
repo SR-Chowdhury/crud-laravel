@@ -131,8 +131,11 @@ class CrudVersionOneController extends Controller
     }
 
     public function deleteMethod($id) {
+        $data = DB::table('v1bio')->where('id', $id)->first();
+
         $deleteData = DB::table('v1bio')->where('id', $id)->delete();
         if($deleteData) {
+            @unlink($data->image);
             $notification = array(
                 'message' => 'Alhamdulillah, Data is successfully Deleted',
                 'alert-type' => 'success'
