@@ -17,7 +17,7 @@
     @csrf
         <div class="col-12">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" name="name" placeholder="Enter your name...">
+            <input type="text" class="form-control" name="user_name" placeholder="Enter your name...">
         </div>
         <div class="col-md-6">
             <label for="email" class="form-label">Email</label>
@@ -41,7 +41,8 @@
             </select>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-primary mt-3">Insert Data</button>
+            <button type="submit" class="btn btn-outline-success mt-3">Insert Data</button>
+            <a href="{{ route('dashboard-v1')}}" class="btn btn-outline-info mt-3">All User List</a>
         </div>
     </form>
 </div>

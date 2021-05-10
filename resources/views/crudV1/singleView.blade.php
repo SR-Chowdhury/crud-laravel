@@ -3,9 +3,18 @@
 @section('content')
 
     <div class="col-lg-6 offset-lg-3">
-        <h1>Name: {{ $singleData->name }}</h1>
+
+        <a href="{{ route('create-form-v1')}}" class="btn btn-outline-success">Insert User Info</a>
+        <a href="{{ route('dashboard-v1')}}" class="btn btn-outline-info">All User List</a><hr>
+
+
+        <h1>Name: {{ $singleData->user_name }}</h1>
         <div>
-            <img src="{{ URL::to($singleData->image) }}" alt="Image" style="height: 340px">
+            @if ($singleData->image)
+                <img src="{{ URL::to($singleData->image) }}" alt="Image" style="height: 340px">
+            @else
+                No Image
+            @endif
         </div>
         <div class="col-6">
             <h5>Email: {{ $singleData->email }}</h3>

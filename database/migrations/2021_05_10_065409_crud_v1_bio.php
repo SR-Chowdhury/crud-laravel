@@ -16,7 +16,7 @@ class CrudV1Bio extends Migration
         Schema::create('v1bio', function (Blueprint $table) {
             $table->id();
             $table->integer('category_id');
-            $table->string('name');
+            $table->string('user_name');
             $table->string('image')->nullable();
             $table->string('email');
             $table->string('phone');

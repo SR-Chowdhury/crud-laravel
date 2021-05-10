@@ -22,4 +22,7 @@ Route::get('/crud-v1/create-form', [CrudVersionOneController::class, 'createForm
 Route::post('/crud-v1/create', [CrudVersionOneController::class, 'createMethod'])->name('create-method-v1');
 
 Route::get('/crud-v1/single/{id}', [CrudVersionOneController::class, 'singleView'])->name('single-v1');
+Route::get('/crud-v1/edit/{id}', [CrudVersionOneController::class, 'editMethod']);
+Route::post('/crud-v1/update/{id}', [CrudVersionOneController::class, 'updateMethod']);
+Route::get('/crud-v1/delete/{id}', [CrudVersionOneController::class, 'deleteMethod']);
 
