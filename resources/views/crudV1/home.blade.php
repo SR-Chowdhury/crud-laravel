@@ -38,6 +38,12 @@
         @endforeach
 
     </tbody>
+    {{-- If you want to see up --}}
+    {{-- {{ $Bio->links() }}  --}}
+
 </table>
+
+<span class="float-right">{{ $Bio->links() }}</span>
+
 
 @endsection

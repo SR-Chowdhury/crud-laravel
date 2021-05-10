@@ -8,7 +8,7 @@ use DB;
 class CrudVersionOneController extends Controller
 {
     public function dashboard() {
-        $Bio = DB::table('v1bio')->get();
+        $Bio = DB::table('v1bio')->paginate(3);
         // echo "<pre>";
         // print_r($Bio);
         return view('crudV1/home', compact('Bio'));
