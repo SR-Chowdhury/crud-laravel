@@ -1,0 +1,15 @@
+Explore SuperStar World
+
+How to install CRUD Larvel v1.0
+
+### First Setup Database
+* DB name: crud_laravel
+* Imort table from 'public/assets/v1.0/db_&_read-me/crud_laravel.sql  
+
+### URL:
+http://localhost/crud-laravel/crud-v1
+
+### Must include toastr_scripts & toastr_styles in dashboad.blade.php
+
+
+	

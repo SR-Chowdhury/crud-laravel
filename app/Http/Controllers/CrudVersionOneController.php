@@ -52,7 +52,7 @@ class CrudVersionOneController extends Controller
             $image_name = hexdec(uniqid());
             $extension = strtolower($image->getClientOriginalExtension());
             $image_full_name = $image_name.'.'.$extension;
-            $upload_path = 'public/assets/v1.0/';
+            $upload_path = 'public/assets/v1.0/image/';
             $image_url = $upload_path.$image_full_name;
             $success = $image->move($upload_path, $image_full_name);
             $data['image'] = $image_url;
@@ -105,7 +105,7 @@ class CrudVersionOneController extends Controller
             $image_name = hexdec(uniqid());
             $extension = strtolower($image->getClientOriginalExtension());
             $image_full_name = $image_name.'.'.$extension;
-            $upload_path = 'public/assets/v1.0/';
+            $upload_path = 'public/assets/v1.0/image/';
             $image_url = $upload_path.$image_full_name;
             $success = $image->move($upload_path, $image_full_name);
             $data['image'] = $image_url;
