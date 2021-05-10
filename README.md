@@ -9,3 +9,5 @@
 > 
 
 * URL: http://localhost/crud-laravel/crud-v1
+
+**Must include toastr_scripts & toastr_styles in dashboad.blade.php**
