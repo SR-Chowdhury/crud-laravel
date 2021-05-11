@@ -1,18 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CrudVersionTwoController;
 use App\Http\Controllers\CrudVersionOneController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+/**
+ * CRUD V 2.0
+ */
+Route::get('/crud-v2', [CrudVersionTwoController::class, 'dashboard'])->name('home-v2');
+Route::get('/crud-v2/single/{id}', [CrudVersionTwoController::class, 'singleView'])->name('single-v2');
+Route::get('/crud-v2/create-form', [CrudVersionTwoController::class, 'createForm'])->name('create-form-v2');
+
+Route::post('/crud-v2/store', [CrudVersionTwoController::class, 'storeMethod'])->name('store-method-v2');
+Route::get('/crud-v2/edit/{id}', [CrudVersionTwoController::class, 'editMethod']);
+Route::post('/crud-v2/update/{id}', [CrudVersionTwoController::class, 'updateMethod']);
+Route::get('/crud-v2/delete/{id}', [CrudVersionTwoController::class, 'deleteMethod']);
+
+
 
 /**
  * CRUD V 1.0
