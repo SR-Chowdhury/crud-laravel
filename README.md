@@ -11,3 +11,12 @@
 * URL: http://localhost/crud-laravel/crud-v1
 
 **Must include toastr_scripts & toastr_styles in dashboad.blade.php**
+
+**N.B. Using Pagination must include - in `app/Providers/AppServiceProvider.php`**
+
+    Line 6: use Illuminate\Pagination\Paginator;
+    
+    public function boot()
+    {
+        Line 27: Paginator::useBootstrap();
+    }
