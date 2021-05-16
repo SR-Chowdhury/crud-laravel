@@ -1,8 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CrudVersionThreeController;
 use App\Http\Controllers\CrudVersionTwoController;
 use App\Http\Controllers\CrudVersionOneController;
+
+/**
+ * CRUD V 3.0
+ */
+Route::resource('crud-v3', CrudVersionThreeController::class);
+
 
 /**
  * CRUD V 2.0

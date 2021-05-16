@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2021 at 10:48 AM
+-- Generation Time: May 16, 2021 at 02:26 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `categories` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NULL DEFAULT current_timestamp()
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -39,8 +39,8 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Private Job Holder', '2021-05-10 06:57:47', '2021-05-10 06:57:47'),
-(2, 'Govt. Job Holder', '2021-05-10 06:57:47', '2021-05-10 06:57:47');
+(1, 'Private Job Holder', NULL, NULL),
+(2, 'Govt. Job Holder', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -79,7 +79,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2021_05_09_225300_crud_common_categories', 1),
-(5, '2021_05_10_065409_crud_v1_bio', 2);
+(5, '2021_05_10_065409_crud_v1_bio', 1),
+(6, '2021_05_11_131521_crud_v2_students', 1);
 
 -- --------------------------------------------------------
 
@@ -127,12 +128,31 @@ CREATE TABLE `v1bio` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `v1bio`
+-- Table structure for table `vtwostudents`
 --
 
-INSERT INTO `v1bio` (`id`, `category_id`, `user_name`, `image`, `email`, `phone`, `created_at`, `updated_at`) VALUES
-(8, 1, 'Shihan', 'public/assets/v1.0/image/1699360490183353.png', 'hackedgdown@gmail.com', '01719896982', NULL, NULL);
+CREATE TABLE `vtwostudents` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `vtwostudents`
+--
+
+INSERT INTO `vtwostudents` (`id`, `category_id`, `user_name`, `image`, `email`, `phone`, `created_at`, `updated_at`) VALUES
+(7, 2, 'Shihan Chowdhury', 'public/assets/v2.0/image/1699490052806920.png', 'hackedgdown@gmail.com', '01787368571', '2021-05-11 13:05:30', '2021-05-11 13:06:54'),
+(8, 1, 'Tanzima Chowdhury', 'public/assets/v2.0/image/1699490429761379.png', 'shihan3star@gmail.com', '01719896982', '2021-05-11 13:12:53', '2021-05-11 13:13:07'),
+(9, 2, 'Al Marjan', 'public/assets/v2.0/image/1699917737922658.png', 'marjan1@gmail.com', '01712325645', '2021-05-16 06:24:46', '2021-05-16 06:25:07');
 
 --
 -- Indexes for dumped tables
@@ -177,6 +197,12 @@ ALTER TABLE `v1bio`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `vtwostudents`
+--
+ALTER TABLE `vtwostudents`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -196,7 +222,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -208,6 +234,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `v1bio`
 --
 ALTER TABLE `v1bio`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `vtwostudents`
+--
+ALTER TABLE `vtwostudents`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
