@@ -2,7 +2,7 @@
 
 # CRUD Larave v3.0 [Using Route Resource]
 
-## 
+## Didn't use SweetAler2
 * URL: http://localhost/crud-laravel/crud-v3
 
 **Must include toastr_scripts & toastr_styles in dashboad.blade.php**
