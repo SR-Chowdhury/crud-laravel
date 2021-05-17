@@ -1,6 +1,23 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-# CRUD Larave v1.0
+# CRUD Larave v3.0 [Using Route Resource]
+
+## 
+* URL: http://localhost/crud-laravel/crud-v3
+
+**Must include toastr_scripts & toastr_styles in dashboad.blade.php**
+
+
+# CRUD Larave v2.0 [Using Model]
+
+## 
+* URL: http://localhost/crud-laravel/crud-v2
+
+**Must include toastr_scripts & toastr_styles in dashboad.blade.php**
+
+
+
+# CRUD Larave v1.0 [Without using Model]
 
 ## First Setup Database
 > DB name: crud_laravel
